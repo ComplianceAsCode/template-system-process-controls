@@ -1,0 +1,3146 @@
+---
+documentation_complete: false
+name: Template System Process Controls
+schema_version: 3.0.0
+satisfies:
+
+- control_key: AC-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: Not applicable
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for identifying and selecting the
+        types of accounts required to support the customer application.
+        Examples of account types include individual, shared, group,
+        system, guest/anonymous, emergency, developer/manufacturer/vendor,
+        temporary, and service. A successful control response will need to
+        address the specific requirements fulfulled by each account type
+        in use.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for assigning account managers, who
+        will have responsibilities related to the creation, management, and
+        removal of accounts. A successful control response will need to discuss
+        how account managers are identified within the organization
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for setting conditions for group and
+        role membership. A successful control response will need to outline
+        these conditions and how they are enforced.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for specifying authorized users,
+        group and role membership, and privileges for each account. A successful
+        control response will need to addess the process by which authorized
+        users are specified and privilege levels are determined.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for requiring approval by designated
+        personnel or roles prior to creating information system accounts. A
+        successful control response will need to outline the personnel or roles
+        responsible for approving information system accounts and the process by
+        which those personnel or roles are notified and approval is granted.
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be repsonsible for defining and enforcing procedures
+        or conditions for the creation, management, and removal of information
+        system accounts. A successful control response will outline the
+        conditions for each action and the tools or procedures used to enforce
+        those conditions.
+        */'
+    - key: g
+      text: |
+        '//*
+        The customer will be responsible for monitoring the use of information
+        system accounts. This may include reviewing records of account
+        management activities. A successful control response will relate the
+        monitoring activities required for this control to the auditing
+        activities in the AU control family.
+        */'
+    - key: h
+      text: |
+        '//*
+        The customer will be responsible for notifying account managers when
+        accounts are no longer required, when users are terminated or
+        transferred, or when system usage or need-to-know changes. A successful
+        control response will need to address the methods by which these
+        triggering events are identified and the managers are notified.
+        */'
+    - key: i
+      text: |
+        '//*
+        The customer will be responsible for authorizing access to the
+        customer application. A successful control response will need to address
+        ensuring that all accounts are granted access based on a valid
+        authorization for a specific intended usage.
+        */'
+    - key: j
+      text: |
+        '//*
+        The customer will be responsible for reviewing accounts for compliance
+        with account management requirements at the specified frequency. A
+        successful control response will need to address the process used to
+        review accounts, the means by which compliance is verified, and the
+        process for remediation of any accounts found not to be in compliance.
+        */'
+    - key: k
+      text: |
+        '//*
+        The customer will be responsible for reissing shared/group account
+        credentials when individuals are removed from the group. A
+        successful control response will need to discuss how a triggering
+        event is notified, what the process and timeframe for reissuing
+        credentials is, and how the process is enforced.
+        */'
+
+- control_key: AC-2 (7)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: Implimented
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing and administering
+        privileged accounts in accordance with a role-based access (RBAC)
+        scheme. A successful control response will need to address the types
+        of users or rules that receive privileged access as well as the
+        organization of the RBAC scheme.
+
+        Adding, or binding, a role to users or groups give the user or group
+        the relevant access granted by the role. You can add and remove roles
+        to and from users and groups using OpenShift commands. Documentation
+        for the management of Role Bindings can be found at:
+
+        https://docs.openshift.com/container-platform/latest/admin_guide/
+        manage_authorization_policy.html#managing-role-bindings
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for monitoring privileged role
+        assignments. A successful control response will need to address
+        the process by which role assignments are reviewed for continued
+        appropriateness.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for defining and executing actions
+        to take when privileged role assignments are no longer appropriate.
+        A successful control response will need to address the criteria for
+        determining whether assignments are no longer appropriate, the actions
+        to be taken, and the roles or personnel responsible for taking those
+        actions.
+        */'
+
+- control_key: AC-2 (9)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: Implemented
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for defining and enforcing
+        conditions for the use of shared group accounts. A successful control
+        response will need to address the specific need for the existing of
+        a shared or group account versus multiple individual accounts, as well
+        as the process for reviewing membership of shared or group accounts to
+        verify that all individuals with access still require that access.
+        */'
+
+- control_key: AC-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for defining separation of duties
+        between individuals so as to reduce the risk of insider threat without
+        collusion. A successful control response will need to consider the
+        possible actions a malicious insider could take to undermine the
+        security of the system, and delineate how duties are separated to
+        prevent or reduce the likelihood of those actions.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for documenting separation of duties.
+        A successful control response will need to address the location of this
+        documentation and the process for reviewing it if necessary.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for defining access authorizations
+        to support separation of duties, for example by using Role Based
+        Access Control. A successful control response will need to address
+        policy and technical enforcement of separation of duties.
+        */'
+
+- control_key: AC-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for following least-privilege
+        principles when granting authorized access. A successful control
+        response will need to address the use of business requirements
+        to determine the level of access required to perform each job function,
+        and how that is related to the role-based access control scheme used
+        within the system.
+        */'
+
+- control_key: AC-6 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for defining key security functions
+        and security-relevant information, and for explicitly authorizing
+        access to those functions and information. A successful control response
+        will need to address the criteria used to determine which functions
+        and information require explicit access authorization.
+        */'
+
+- control_key: AC-6 (5)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for defining specific personnel
+        or roles who require privileged access, and restricting privileged
+        access to those personnel or roles. A successful response will need
+        to address the job functions or responsibilities for which
+        privileged access is required.
+        */'
+
+- control_key: AC-14
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for identifying user actions that can
+        be performed on the information system without identification or
+        authentication consistent with missions/business functions. A
+        successful control response will identify such actions.
+        */'
+
+- control_key: AC-17
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing and documenting
+        usage restrictions, configuration and connection requirements, and
+        implementation guidance for access to the customer application
+        (note that in a cloud environment, all user access will be remote
+        access).
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for authorizing remote access before
+        allowing such connections. Due to the nature of the cloud environment,
+        a successful control response will need to indicate that authorizing
+        remote access is equivalent to authorizing any access, and relate this
+        control to AC-2.
+        */'
+
+- control_key: AC-17 (4)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for authoring the execution of
+        privileged commands and access to security-relevant information via
+        remote access. Due to the nature of the cloud environment, a
+        successful control response will need to indicate that authorizing
+        these activities over remote access is equivalent to authorizing them
+        at all, and refer to AC-2.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for authorizing the execution of
+        privileged commands and access to security-relevant information via
+        remote access. Due to the nature of the cloud environment, a successful
+        control response will need to indicate that authorizing these activities
+        over remote access is equivalent to authorizing them at all, and refer
+        to AC-2.
+        */'
+- control_key: AT-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: 'a'
+      text: |
+        '//*
+        The customer will be responsible for providing basic security
+        awareness training as part of initial training. A successful control
+        response will outline the content of the training and will discuss the
+        process for ensuring that all users undergo the required training.
+        */'
+    - key: 'b'
+      text: |
+        '//*
+        The customer will be responsible for providing updated basic security
+        awareness training as required by information system changes. A
+        succesful control response will discuss the process for determining
+        what information system changes require updated training, how the
+        training content is updated, and how users are notified of the need for
+        re-training.
+        */'
+    - key: 'c'
+      text: |
+        '//*
+        The customer will be responsible for refreshing the basic security
+        awareness training annually. A successful control response will
+        discuss the process for ensuring that all users undergo the required
+        re-trianing.
+        */'
+
+- control_key: AU-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for selecting a subsec of the events
+        listed in AU-2(a) to be audited by the system. For FedRAMP compliance,
+        these events must be monitored continuously. A successful control
+        response will include a discussion of the rationale for the events
+        chosen.
+
+        Note this control only identifies which events are relevant for this
+        information sysem. Technical implimentation, at a information system
+        component level, is documented in AU-12(a).
+        */'
+
+- control_key: AU-2 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for reviewing and updating the audited
+        events annually or whenever there is a change in the threat environment.
+        A successful control response will outline how often events are
+        reviewed.
+        */'
+
+- control_key: AU-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for allocating audit record storage capacity
+        in accordance with the organizations requirements. A successful control
+        response will explain the procedures in place to ensure that audit
+        storage is allocated according to meet customer requirements.
+        */'
+
+- control_key: AU-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        Customers are responsible for review and analysis of the information
+        system audit records at least weekly for indications of inappropriate
+        or unusual activity. A successful control response will outline how
+        often audit records are reviewed, and types of activities they are
+        reviewed for.
+        */'
+    - key: b
+      text: |
+        '//*
+        Customers are responsible for ensuring that audit review findings are
+        reported to the appropriate personnel. A successful control response
+        will outline how the audit review findings are reported.
+        */'
+
+- control_key: AU-6 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for employing automated mechanisms to
+        integrate audit, review, analysis, and reporting process to support
+        organizational processes for investigation and response to suspicious
+        activities. A successful control response will review the automated
+        tools used for integrating review, analysis, and reporting, and how
+        these tools are employed.
+        */'
+
+- control_key: AU-7
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        Customers are responsible for ensuring that the information system
+        provides an audit reduction and report generation capability that
+        supports on demand audit review, analysis, and reporting requirements
+        and after-the-fact investigations of security incidents. A successful
+        control response will discuss how the information system provides
+        audit reduction and report generation that supports these requirements.
+        This can include a discussion of tools used to provide this capability,
+        and how they are used.
+        */'
+
+- control_key: AU-9 (4)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are required to authorize access to management of audit
+        functionality to only a subset of privileged users. A successful control
+        response will discuss how access to audit functionality is restricted
+        to only appropriate personnel. This can include a description of who
+        this functionality is restricted to, and how this is controlled.
+        */'
+
+- control_key: AU-11
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are required to retain audit records for at least ninety
+        days to provide support for after the fact investigations of security
+        incidents and to meet regulatory and organizational information
+        retention requirements. A successful control response will discuss how
+        long audit records are retained.>
+
+        <Audit log retention may be configured in the underlying Red Hat
+        Enterprise Linux audit daemon. If using a central or 3rd party
+        logging solution, this may likely need to be configured in that tool.
+        */'
+- control_key: CA-2 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for employing a FedRAMP-accredited
+        3PAO to conduct security control assessments. In addition to performing
+        the assessment, this 3PAO will assist in the development of the Security
+        Assessment Plan and Security Assessment Report (see CA-2).
+        */'
+
+- control_key: CA-2 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for ensuring that, at a minimum,
+        vulnerability scanning is performed annually as part of the
+        assessment process. A successful control response will need to address
+        the minimum requirement, as well as discussing any additional testing
+        performed during assessments, such as malicious user testing, insider
+        threat assessment, performance/load testing, or other tests the customer
+        chooses to perform.
+        */'
+
+- control_key: CA-2 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for working with a 3PAO to assess
+        the system using the methodology prescribed by FedRAMP. A successful
+        control response will need to address how the assessment will be carried
+        out and how the results will be documented and submitted to FedRAMP
+        for approval.
+        */'
+
+- control_key: CA-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for authorizing connections to
+        external information systems. A successful control response will
+        need to address the individuals or roles responsible for engaging with
+        authorized points of contact for such external systems and the process
+        for documenting and signing the conditions of the connections in
+        Interconnection System Agreements.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for documenting the details of each
+        interconnection. A successful control response will need to address
+        the process for verifying the interface characteristics, security
+        requirements, and the nature of the information communicated; a summary
+        of this information will need to be included as part of the table
+        above.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for reviewing and updating the
+        Interconnection Security Agreements at the required frequency. A
+        successful control response will need to discuss the initiation of the
+        review process, as well as the roles or individuals responsible for
+        reviewing, verifying, updating, and approving any changes to the
+        documentation.
+        */'
+
+- control_key: CA-3 (5)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for determining whether connections
+        to external information systems will be governed by an
+        allow-all/deny-by-exception policy or by a deny-all/allow-by-exception
+        policy. A successful control response will need to address the rationale
+        for the selection. In addition, the policy choice and its rationale will
+        need to be included in the Architecture Briefing and in the introductory
+        sections of this Security Plan.
+        */'
+
+- control_key: CA-7
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for including ongoing security
+        control assessments as part of the continuous monitoring program. This
+        may include assessment of controls specifically found to be other than
+        satisfied as part of the 3PAO assessments discussed in CA-2, as well as
+        internal assessment of satisfied controls to verify continued
+        effectiveness of implementation. A successful control response will
+        need to address the roles or individuals responsible for testing, as
+        well as the methodology used for testing.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for monitoring the metrics defined
+        in part (a) as part of continuous monitoring. A successful control
+        response will need to discuss how metrics are gathered and reported,
+        as well as the conditions under which monitoring will lead to changes
+        or additions to related reporting, such as POA&M reporting.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for correlating and analyzing
+        security-related information gathered from multiple sources, including
+        periodic assessments and continuous monitoring. A successful control
+        response will need to address tools or processes used to perform
+        correlation and analysis.
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be responsible for responding appropriately
+        to the results of the analysis in part (e). A successful control
+        response will need to discuss under what conditions each response action
+        should be taken (for example, if a new vulnerability is found in the
+        system, a POA&M item should be opened).
+        */'
+    - key: g
+      text: |
+        '//*
+        The customer will be responsible for reporting the security status of
+        the system in accordance with FedRAMP requirements at a regular
+        frequency. This frequency should be compatible with the frequency of
+        POA&M reporting specified in CA-5.
+        */'
+    - key: 'Req. 1'
+      text: |
+        '//*
+        The customer will be responsible for performing vulnerability scans
+        of operating systems at least monthly. See also RA-5.
+        */'
+    - key: 'Req. 2'
+      text: |
+        '//*
+        The customer will be responsible for performing vulnerability scans
+        of databases and web applications at least monthly. See also RA-5.
+        */'
+    - key: 'Req. 3'
+      text: |
+        '//*
+        The customer will be responsible for ensuring that an independent
+        assessor performs vulnerability scans at least annually. See also
+        CA-2(2).
+        */'
+
+- control_key: CA-7 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for monitoring security controls on
+        an ongoing basis with the assistance of an assessment team with a
+        control-defined level of independance. Note that this may be the 3PAO
+        used for recurring assessments, it may be a different independent
+        assessor, or it may be a team of personnel employed by the customer. A
+        successful control response will need to address the nature of this team
+        and the methods by which they access security controls within the
+        system.
+        */'
+
+- control_key: CA-8
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for conducting penetration testing
+        at the required frequency. A successful control response will need to
+        address the systems or components tested and outline the rules of
+        engagement for testing (e.g. operational personnel are/are not notified
+        in advance of testing, certain components of the system are off-limits
+        for this test, etc.).
+        */'
+
+- control_key: CA-8 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for employing an independent agent
+        or team to perform penetration testing. A successful control response
+        will need to address how independence is ensured.
+        */'
+
+- control_key: CA-9
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for authorizing connections within
+        the system, such as between two types of virtual machines within the
+        customer environment. A successful control response will need to address
+        the individual or roles with the authorizing responsibility, as well
+        as how a determination is made to allow a connection between
+        components or classes of components.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for documenting the required
+        information for each internal connection. This may be documented in
+        e.g. data flow diagrams or architectural diagrams. A successful control
+        response will need to address the process by which this documentation
+        is created.
+        */'
+
+- control_key: CM-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for developing, documenting, and
+        maintaining configuration control, a current baseline configuration
+        of the information system. A successful control response will need to
+        address the way the baseline configurations are managed and
+        maintained.
+        */'
+
+- control_key: CM-2 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for reviewing and updating the
+        baseline configuration of the information system at least annually.
+        A successful control response will need to address how often the
+        baseline configuration is reviewed and updated.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for reviewing and updating the
+        baseline configuration of the information system when required by the
+        JAB. A successful control response will need to address updates to the
+        baseline configuration when required by the JAB.
+        */'
+
+- control_key: CM-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for determining the types of changes
+        to the information system that are configuration controlled. A
+        successful control response will need to address how decisions are made
+        to determine configuration controlled changes.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for reviewing proposed configuration
+        controlled changes to the information system and approving or
+        disapproving changes with explicit consideration for security impact
+        analysis. A successful control response will need to address how
+        decisions are made to approve configuration control changes, including
+        how the security impact of these changes is considered.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for documenting configuration change
+        decisions. A successful control response will need to address how
+        configuration change decisions are documented. This can include, for
+        example, what tools are used and what information is documented.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for retaining records of
+        configuration-controlled changes to the information system for a
+        defined period. A successful control response will need to address long
+        records of configuration-controlled changes are kept, and where these
+        records are maintained.
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be responsible for auditing and reviewing activities
+        associated with configuration-controlled changes to the information
+        system for a defined period. A successful control response will need
+        to ensure configuration control change activities are audited and
+        reviewed. This can include tools used to track these changes and when
+        these changes are reviewed.
+        */'
+    - key: g
+      text: |
+        '//*
+        The customer will be responsible for coordinating and providing
+        oversight for the configuration control activities through a central
+        means of communicating major changes or developments that may affect
+        services to the federal government. The means of communication must
+        be approved and accepted by the JAB. A successful control response
+        will outline how major changes or developments that affect government
+        services will be coordinated and overseen.
+        */'
+
+- control_key: CM-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for defining, documenting, approving
+        and enforcing physical and logical access restrictions associated with
+        changes to the information system. A successful control response will
+        include how logical access associated with change control is defined,
+        documented, and enforced. This should include tools used to enforce
+        these restrictions, such as Active Directory, and how these personnel
+        are approved for access.
+        */'
+
+- control_key: CM-5 (5)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for limiting privileges to change
+        information system components and system related information within
+        a production or operational environment. A successful control response
+        will include how privileges to change the production/operation
+        environment are limited. This can include defining who has access to
+        these privileges, how they may be separated, and any gates they must
+        go through.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for reviewing and reevaluating
+        privileges at least quarterly. A successful control response will
+        include how often reviews are performed for presonnel with privileges
+        to change the information system within the production environment.
+        */'
+
+- control_key: CM-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing and documenting
+        configuration settings for information technology products employed
+        within the information system using FedRAMP guidance that reflects
+        the most restrictive mode consistent with operational requirements. A
+        successful control response will include how the customer develops
+        base configurations to ensure that they are as restrictive as possible
+        while still allowing the system to operate.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for identifying, documenting, and
+        approving any deviations from established configuration settings for
+        components based on operational requirements. A successful control
+        response will explain the process for identifying, documenting, and
+        approving and deviations. This can include tools used to track any
+        exceptions, and the process for identifying and approving these
+        deviations.
+        */'
+
+- control_key: CM-6 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for employing automated mechanisms
+        to centrally manage, apply, and verify configuration settings for
+        information system components. A successful control response will
+        describe any automated systems in place used to manage, apply, and
+        verify configuration settings. An example of this is using Active
+        Directory Group Policy Objects to manage security settings.
+        */'
+
+- control_key: CM-8
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing and documenting an
+        inventory that meets FedRAMP requirements. A successful control response
+        will include a description of how the inventory is developed and
+        documented. This process should ensure that the inventory accurately
+        reflects the current system, includes and components, is granular enough
+        to support tracking and reporting, and includes any information the
+        customer has deemed necessary to achieve effective accountability.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will responsible for reviewing and updating the system
+        inventory at least monthly. This may be performed in conjunction with
+        continuous monitoring and POA&M tracking activities. A sucessful control
+        response will need to address the personnel or roles responsible for
+        updating the system inventory and the process for correcting gaps or
+        discrepancies found.
+        */'
+
+- control_key: CM-8 (5)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for verifying all components within
+        the authorization boundary of the information system are not duplicated
+        in other information system inventories. A successful control response
+        will describe the process used to ensure that assets are not included
+        in multiple system inventories.
+        */'
+
+- control_key: CM-9
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing, documenting, and
+        implementing a configuration management plan that addresses roles,
+        responsibilities, and configuration management processes and procedures.
+        A successful control response will describe how the configuration
+        management plan deals with roles, responsibilities, and processes
+        and procedures.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for developing, documenting, and
+        implementing a configuration management plan that establishes a
+        process for identifying configuration items throughout the
+        system development life cycle and for managing the configuration of
+        configuration items. A successful control response will describe how
+        the configuration management plan establishes a system to track and
+        manage changes to the system.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for developing, documenting, and
+        implementing a configuration management plan that defines the
+        configuration items for the information system and places them
+        under configuration management. A successful control response will
+        describe how the configuration management plan defines configuration
+        items, and the process used to manage them.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for developing, documenting, and
+        implementing a configuration management plan that protects the
+        configuration management plan from unauthorized disclosure. A
+        successful control response will describe how the configuration
+        management plan is protected from disclosure, such as where it is
+        stored, and controls in place to prevent unauthorized access.
+        */'
+
+- control_key: CM-10
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for using software and associated
+        documentation in accordance with contract agreements and copyright laws.
+        A successful control response will include a description or reference
+        to the customers acceptable use policy.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for tracking the use of software and
+        associated documentation protected by quantity licenses to control
+        copying and distribution. A successful control response will include
+        a description of how these licenses are tracked and protected.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for control and documentation of the
+        use of peer-to-peer file sharing technology to ensure that this
+        capability is not used for the unauthorized distribution, display,
+        performance, or reproduction of copyrighted work. A successful control
+        response will include any controls and documentation for peer-to-peer
+        technology allowed within the system. An example of this could include
+        acceptable use policies in place.
+        */'
+
+- control_key: CM-11
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing policies governing
+        the installation of software by users. A successful control response
+        will describe policies in place that define the restrictions in place
+        for installation of software by users.
+        */'
+- control_key: CP-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing a contingency plan
+        meeting the specified requirements. A successful control response will
+        need to address the maintenance, recovery, and resumption of customer
+        applications, as well as any reliance on infrastructure functionality
+        to perform these tasks, as outlined in policy guidance from CP-1.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for distributing the contingency plan
+        to key contingency personnel. A successful control response will need
+        to address identification of key personnel (by name, title, or role)
+        and the means by which the customer ensures that all key personnel
+        receive the contingency plan.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for coordinating contingency planning
+        activities with incident handling activities. A successful control
+        response will need to address the division of responsibilities between
+        contingency personnel and incident response personnel, as well as the
+        means by which contingency planning activities are activated in the
+        event of a security incident.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for reviewing the contingency plan
+        at the required frequency. A successful control response will need to
+        outline how reviews are initiated, performed, and signed off on.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for updating the contingency plan to
+        address relevant changes as well as any problems found in the
+        contingency plan. A successful control response will need to discuss
+        how updates are proposed, implemented, and approved.
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be responsible for communicating changes to the
+        contingency plan to key contingency personnel. A successful control
+        response will need to address the means by which the
+        customer ensures that all key personnel receive the updated
+        contingency plan.
+        */'
+    - key: g
+      text: |
+        '//*
+        The customer will be responsible for protecting the contingency plan
+        from unauthorized disclosure or modification. A successful control
+        response will need to address policy, procedural, and technical
+        safeguards that are in place to protect the contingency plan.
+        */'
+
+- control_key: CP-2 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for coordinating development of the
+        contingency plan with related plans (such as business continuity plans,
+        disaster recovery plans, etc.). A successful control response will need
+        to address the coordination of initial development, as well as how
+        updates to the contingency plan affect related plans and vice versa.
+        */'
+
+- control_key: CP-2 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for reserving capacity for processing
+        in an alternative region. A successful control response will need to
+        note that capacity for necessary processing has been reserved in an
+        alternate region.
+        */'
+
+- control_key: CP-2 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        This control is often inherited through your platform provider,
+        e.g. Microsoft Azure implements this control on behalf of both PaaS
+        and IaaS customers. A successful control response will indicate if this
+        control is inherited through your platform provider, and if not,
+        details how mission functions will be resumed.
+        */'
+
+- control_key: CP-2 (8)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for identifying critical
+        functionality for which processing capacity must be reserved in an
+        alternate region. A successful control response will need to discuss
+        the process by wich this determination is made. Once processing
+        capacity is reserved in an alternate region for this critical
+        functionality, the remainder of the control may be inherited
+        from your infrastruture provider.
+        */'
+
+- control_key: CP-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for initial and refresher training
+        related to contingency plan activities at the required intervals. A
+        successful control response will need to outline the scope and contents
+        of the training, the audience for the training, and the means by which
+        training attendance is tracked and enforced.
+        */'
+
+- control_key: CP-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for testing of contingency plans
+        related to the customer application at the required frequency. A
+        successful control response will need to address the scenarios and
+        exercises chosen for the test.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for reviewing the results of
+        contingency plan testing. A successful control response will need to
+        discuss the roles or personnel responsible for review, as well as the
+        format and content of reporting on the results.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for initiating corrective action as
+        a result of contingency plan testing. A successful control response will
+        need to address the types of corrective actions taken and timeframes
+        for those actions.
+        */'
+
+- control_key: CP-4 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for coordinating testing of the
+        contingency plan with related plans (such as business continuity plans,
+        disaster recovery plans, etc.). A successful control response will need
+        to address ensuring that any test results relevant to related plans are
+        communicated so that corrective actions may be taken as needed.
+        */'
+
+- control_key: CP-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for enabling geo-replicated within
+        the information system which will allow restoration from backups.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible to ensure alternate storage sites
+        provide information security safeguards equivalent to the primary
+        site.
+        */'
+
+- control_key: CP-6 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for identifying an alternative
+        storage site that is separated from the primary storage site to reduce
+        susceptibility to the same threats.
+        */'
+
+- control_key: CP-6 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for identifying potential
+        accessibility problems to the alternate storage site in the event of
+        an area-wide disruption or disaster and outlines explicit
+        mitigation actions. This control is often inherited from IaaS and PaaS
+        providers.
+        */'
+
+- control_key: CP-7
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for reserving capacity for processing
+        in an alternate region. A successful control response will need to note
+        that capacity for necessary processing has been reserved in an alternate
+        region, and will then indicate inheritance of capacity planning from
+        most IaaS providers.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for ensuring that equipment and
+        supplies required to transfer and resume operations are available
+        at the alternate processing site. This control is often inherited
+        from organizational processes.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for ensuring that the alternate
+        processing site provides information security safeguards equivalent
+        to that of the primary site.
+        */'
+
+- control_key: CP-7 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer is responsible for identifying an alternate processing
+        site that is separated from the primary processing site to reduce
+        susceptibility to the same threats. Per FedRAMP guidance, the service
+        provider may determine what is considered a sufficient degree of
+        separation between the primary and alternate processing sites, based
+        on the types of threats that are of concern. This control is often
+        inherited from organizational processes.
+        */'
+
+- control_key: CP-7 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for identifying potential
+        accessibility problems to the alternate processing site in the event of
+        an area-wide disruption or disaster and outlines explicit mitigation
+        actions. This control is often inherited from organizational
+        processes.
+        */'
+
+- control_key: CP-7 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for developing alternate processing
+        site agreements that contain priority-of-service provisions in
+        accordance with organizational availability requirements. This control
+        is often inherited from organizational, IaaS, or PaaS providers.
+        */'
+
+- control_key: CP-8
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for establishing alternate
+        telecommunication services including necessary agreements to permit
+        the resumption of operations. The customer must define a time period
+        to resume business operations that is consistent with the business
+        impact analysis. This control is often inherited from organizational,
+        IaaS, or PaaS providers.
+        */'
+
+- control_key: CP-8 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The custimer will be responsible for developing primary and
+        alternate telecommunication service agreements that contain
+        priority-of-service provisions in accordance with organiational
+        availability requirements (including recovery time objectives). This
+        control is often inherited from IaaS and PaaS providers.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible to request telecommunications
+        service priority for all telecommunications services used for national
+        security emergency preparedness in the event that the primary and/or
+        alternate telecommunications services are provided by a common carrier.
+        This control is often inherited from IaaS and PaaS providers.
+        */'
+
+- control_key: CP-8 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for obtaining alernate
+        telecommunications services to reduce the likelihood of sharing a
+        single point of failure with primary telecommunications services. This
+        control is often inherited from IaaS and PaaS providers.
+        */'
+
+- control_key: CP-10
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for providing recovery and
+        reconstitution of the information system to a known state after a
+        disruption, compromise, or failure.
+        */'
+
+
+- control_key: IR-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for initial training related to
+        contingency plan activities. This training will need to include
+        consideration for all aspects of incident response that are the
+        responsibility of the customer. A successful control response will need
+        to outline the scope and contents of the training, the audience for the
+        training, and the means by which training attendance is tracked and
+        enforced.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for providing retraining related to
+        contingency plan activities as required by information system changes. A
+        successful control response will need to address identification of
+        changes that require retraining as well as notification to relevant
+        parties that retraining is required and tracking/enforcement of that
+        attendance.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for refresher training related to
+        contingency plan activities at the required frequency. A successful
+        control response will need to address the means by which refresher
+        training attendance is tracked and enforced.
+        */'
+
+- control_key: IR-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for testing of incident response
+        plans at the required frequency. A successful control response will
+        need to address the scenarios and exercise chosen for the test, as well
+        as the process for documenting and reviewing test results. Test plans
+        will need to be approved by the Authorizing Official prior to the test
+        commencing.
+
+        NIST Special Publication 800-61, Rev 2, Computer Security Incident
+        Handling Guide, provides guidance on the development and testing
+        of incident response plans.
+        */'
+
+- control_key: IR-3 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for coordinating testing of the
+        incident response plan with related plans (such as business continuity
+        plans, contingency plans, etc.). A successful control response will
+        need to address ensuring that any test results relevant to related
+        plans are communicated so that corrective actions may be taken as
+        needed.
+        */'
+
+- control_key: IR-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing incident response
+        plans and testing that includes consideration for any controls that are
+        the responsibility of the customer relating to shared touch points
+        included in the customers authorization boundary and any customer
+        applications leveraging the providers infrastructure. Incident handling
+        for customer applications is the responsiblity of the customer unless
+        an incident is caused by platform providers (e.g. IaaS). A successful
+        control response will need to address the required steps in incident
+        response (preparation, detection and analysis, containment, eradication,
+        and recovery), including identifying roles or individuals responsible
+        for each step.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for incident handling activities
+        with contingency plan activities. A successful control response will
+        need to address communication and prioritization in the case of
+        conflicts (for example, if incident analysis and containment causes
+        delays in service restoration).
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for updating incident response plans,
+        procedures, training and testing based on lessons learned from incident
+        handling activities. A successful control response will need to address
+        the personnel or roles responsible for gathering and reviewing lessons
+        learned, updating plans, procedures, training, and testing, and
+        reviewing and signing off on changes.
+        */'
+
+- control_key: IR-4 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for using automated mechanisms
+        (such as ticketing systems and incident tracking/reporting systems) in
+        support of customer incident handling activities. A successful control
+        response will need to address the automated systems involved and their
+        place within the overall incident handling process.
+        */'
+
+- control_key: IR-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responisble for tracking and documenting
+        information system security incidents. A successful control response
+        will need to address the tools and processes used for documentation,
+        and relate these tools and processes to the automated mechanisms
+        used in IR-4(1).
+        */'
+
+- control_key: IR-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for requiring personnel to report
+        suspected security incidents within the required timeframes. A
+        successful control response will need to address examples of events that
+        personnel should report, as well as tools, mechanisms, and processes
+        used for reporting.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for reporting security incident
+        information according to the FedRAMP Incident Communications Procedure.
+        In cases where customer security incidents may affect the security
+        status of Microsoft Azure as a whole, the customer will be responsible
+        for notifying Microsoft Azure as well. A successful control response
+        will need to address the individuals or roles responsible for such
+        notifications.
+        */'
+
+- control_key: IR-6 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for using automated mechanisms (such
+        as ticketing systems and incident tracking/reporting systems) in support
+        of the reporting of security incidents. A successful control response
+        will need to address the automated systems involved and how they are
+        used for reporting of incidents.
+        */'
+
+- control_key: IR-7
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for providing incident response
+        resources to their users. These resources may be, for example, web
+        pages, helpdesk resources, or assistanceg groups. A successful
+        control response will need to outline the resources available and
+        discuss how users are notified of the existence of these resources.
+        */'
+
+- control_key: IR-7 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responislbe for using automated mechanisms
+        (such as websites or email distribution lists) to increase the
+        availability of incident response support resources. A successful
+        control response will need to discuss the mechanisms used and the
+        information and support resources provided via each mechanism.
+        */'
+
+- control_key: IR-7 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing relationships
+        between its incident response capability and external providers. In
+        particular, it is the customers responsibility to provide accurate
+        and current contact information to IaaS providers in order to receive
+        notifications of security incidents involving the potential breach
+        of customer data. Additionally, the customer is responsible to designate
+        US-CERT as a notification contact. A successful control response will
+        need to address these requirements as well as relationships with any
+        other relevant external providers of information system protection
+        capability.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for identifying incident response
+        team members to IaaS providers and any other external providers. A
+        successful control response will need to discuss the means by which
+        this identification is communicated.
+        */'
+
+- control_key: IR-8
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing an incident response
+        plan that includes consideration for any controls that are the
+        responsibility of the customer relating to shared touch points inclduded
+        in the customers authorization boundary and any customer applications
+        leveraging the providers infrastructure. A successful control response
+        will need to address how the plan meets each of the specified
+        requirements, and the individuals or roles responsible for ensuring that
+        the requirements are met.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for distributing the incident
+        response plan to identified internal and FedRAMP personnel. A successful
+        control response will need to address the criteria for inclusion in the
+        distribution list.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for reviewing the incident response
+        plan at the required frequency. A successful control response will need
+        to address how the review process is initiated and the roles or
+        individuals responsible for performing the review.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for updating the incident response
+        plan as appropriate. A successful control response will need to address
+        the criteria for requiring an update to the incident response plan, the
+        individuals or roles responsible for updating the plan, and the process
+        for approval of updates.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for communicating changes made to the
+        incident response plan to the list of internal and FedRAMP personnel
+        identified in IR-8(b).
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be responsible for protecting the incident response
+        plan from unauthorized disclosure or modification. A successful control
+        response will need to address policy, procedural, and technical
+        safeguards that are in place to protect the incident response plan.
+        */'
+
+- control_key: IR-9
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be repsonsible for identifying the specific
+        information involved in an information spill. A successful control
+        response will need to address how spills are detected and the tools
+        or processes used to identify the specific information involved.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for alerting designated personnel
+        using a non-contaminated method of communication. A successful control
+        response will need to discuss how the personnel are designated and
+        notified.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for isolating the contaminated
+        system or component. This may involved, for example, disabling
+        connections to the component or shutting it down. A successful
+        contorl response will need to address the types of components that
+        could potentially be contaminated and the mechanism for isolating
+        each type.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for eradicating the spilled
+        information from the contaminated system or component. A successful
+        control response will need to address the means by which
+        eradication is carried out and confirmed.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be repsonsible for identifying other systems or
+        components that may have been contaminated subsequent to the initial
+        spill. A successful control response will need to outline the
+        investigative process used to make this determination.
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be responsible for identifying and performing any
+        additional required actions to resolve information spills. A
+        successful control response will need to address how those actions
+        are identified and the roles or individuals responsible for
+        identifying and performing the actions.
+        */'
+
+- control_key: IR-9 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for identifying personnel or roles
+        with responsibility for responding to information spills. This may be
+        all members of the incident response team, specific members with
+        specialized knowledge, or individuals or teams completely distinct from
+        the incident response team. A successful control response will need to
+        address the rationale for the selection.
+        */'
+
+- control_key: IR-9 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for providing information spillage
+        response training on a regular basis. This may be incorporated into
+        overall incident response training or may be a separate training
+        course or module. A successful control response will need to outline
+        the contents of the information spillage response training and address
+        the frequency at which training is provided.
+        */'
+
+- control_key: IR-9 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for defining and implementing
+        procedures to allow personnel affected by information spills to continue
+        carrying out assigned tasks during the information spill response
+        process. A successful contorl response will need to addres, for example,
+        alternate means of connection to affected systems and changes to
+        processes required to employ those alternate means.
+        */'
+
+- control_key: IR-9 (4)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for defining and employing additional
+        safeguards for personnel exposed to information they were not authorized
+        to access. These may include, for example, additional training,
+        non-disclosure agreements, etc. A successful control response will need
+        to address the nature of these safeguards and whether they are employed
+        proactively (prior to information spillage incidents) or reactively
+        (following information spillage incidents).
+        */'
+- control_key: MA-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for requiring that datacenter
+        management and property asset owners explicity approve the removal
+        of the information system or system components from organizational
+        facilities for off-site maintenance repairs. This is frequently an
+        inherited control from IaaS providers and not applicable to OpenShift
+        deployments.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for santizing equipment to remove
+        all information from the associated media prior to removal from
+        organizational facilities. This is frequently an inherited control
+        from IaaS providers and not applicable to OpenShift deployments.
+        */'
+
+- control_key: MA-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for approving, controlling, and
+        monitoring information system maintenance records. A successful
+        control response will document this process.
+        */'
+
+- control_key: MA-3 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for inspecting the maintenance
+        tools carried into a facility by maintenance personnel for improper
+        or unauthorized modifications. A successful control response
+        will document this process.
+        */'
+
+- control_key: MA-3 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for checking media containing
+        diagnostic and test programs for malicious code before the
+        media are used in the information system. A successful control response
+        documents this process.
+        */'
+
+- control_key: MA-3 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for prevengint unauthorized removal
+        of manteance equipment containing organizational information. A
+        successful control response will address (a) process to verify there
+        is no organizational information contained on the equipment; (b) how
+        equipment is sanitized or destroyed; (c) process to retain the
+        equipment within the facility; (d) process to obtain an exception
+        from these processes from the information owner that explicity
+        authorizes removal of equipment from the facility
+        */'
+
+- control_key: MA-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for approving and monitoring
+        non-local maintenance and diagnostic activities. Because of the nature
+        of a cloud system, all maintenance and diagnostic activities will be
+        considered non-local. Therefore, this control can largely be
+        addressed by reference to acess control authorizations (see AC-2)
+        and the auditing and monitoring discussions in the AU family and SI-4. A
+        successful control response will need to address the personnel or roles
+        who are authorized to perform maintenance and diagnostic activities,
+        and how those activities are tracked.
+        */'
+
+- control_key: MA-4 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for documenting the policies and
+        procedures for the establishment and use of non-local maintenance
+        and diagnostic connections. A successful control response will need to
+        address when non-local maintenance and diagnostic connections are
+        allowed, what personnel are authorized to establish and use them, and
+        udner what circumstances connections must be terminated.
+        */'
+
+- control_key: MA-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing a process for
+        maintenance personnel authorizationa and maintains a list of authorized
+        maintenance organizations/personnel. A successful control response will
+        document this process and where the records are kept.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for ensuring that non-escorted
+        personnel performing maintenance on the information system have
+        required access authorizations. A successful control response will
+        document this process, and should involve the information owner
+        signing off on this access.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for designating organizational
+        personnel with required access authorizations and technical
+        competence to supervise the maintenance personnel. A successful
+        control response will document the process for becoming an escore, and
+        how technical competence is established.
+        */'
+
+- control_key: MA-5 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for implementing procedures for
+        the use of maintenace personnel that lack appropriate security
+        clearances or are not U.S. citizens. These procures must address
+        (1) personnel who do not have needed access authorizations are escorted
+        by those who do; optionally (2) prior to initiating maintenance or
+        diagnostic activities by personnel lacking access authorizations, all
+        volatile information storage components within the information system
+        are santized and all nonvolatile storage media are removed or physically
+        disconnected from the system and secured.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for developing and implimenting
+        alternate security safeguards in the event an information system
+        component cannot be santized, removed, or disconnected from the system.
+        A successful control response will document how maintenance staff
+        lacking appropriate authorizations will not be able to access
+        data residing on the informarion system.
+        */'
+
+- control_key: MA-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for obtaining maintenance support
+        and/or spare parts for critical components within a reasonable time
+        to minimize production impact.
+        */'
+#
+# To date, we have not been asked to complete Media Protection
+# sections. This content is only a placeholder.
+#
+#
+# To date, we have not been asked to complete Physical and Environmental
+# Protection sections. This content is only a placeholder.
+#
+- control_key: PL-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing a system security
+        plan (this document) in accordance with the above requirements. A
+        successful control response will need to address each of the
+        requirements and how this document meets them.
+
+        The customer may with to consult NIST Special Publication 800-18,
+        Revision 1, Guide for Developing Security Plans for Federal Information
+        Systems, which contains guidance on security planning. Portions of this
+        system security plan will discuss controls inherited from infrastructure
+        providers, such as Microsoft Azure, and will refer to the
+        infrastructure providers SSP.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for distributing the system security
+        plan to relevant personnel and keeping those personnel informed of
+        subsequent changes. A successful control response will need to address
+        identifying personnel who should receive a copy of the system security
+        plan, as well as ensuring all such personnel are notified
+        appropriately.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for reviewing the system security
+        plan at the required frequency. A successful control response will need
+        to address the initiation of the review process and the roles or
+        individuals responsible for review.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for updating the system security
+        plan to address changes to the information system and its environment
+        or any problems identified during implementation or security
+        assessments. A successful control response will need to discuss the
+        roles or individuals responsible for updating the plan, as well as
+        the process for approval of any updates.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for protecting the security plan from
+        unauthorized disclosure or modification. A successful control response
+        will need to address policy, procedural, and technical safeguards that
+        are in place to protect the system security plan.
+        */'
+
+- control_key: PL-2 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for planning and coordinating
+        security-related activities so as to reduce the impact on other
+        organizational entities. These activities may include security
+        assessments, audits, maintenance, patch management, and contingency
+        plan testing. A successful control response will need to address the
+        process by which other organizational entities are notified of and
+        consulted regarding such activities.
+        */'
+
+- control_key: PL-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for defining, documenting, and
+        distributing rules of behavior. A successful control response will need
+        to outline the rules of behavior and discuss the process for making them
+        available to users requiring access to the system.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be repsonsible for obtaining signed acknowledgement
+        of the rules of behavior from its users. A successful control response
+        will need to address the process for withholding authorization until
+        signatures are obtained.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for reviewing and updating the rules
+        of behavior at the required frequency. A successful control response
+        will need to address the process for initiating review, as well as the
+        individuals or roles for carrying out the review, managing updates, and
+        approving the final version.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for obtaining signed acknowledgement
+        of the updated rules of behavior. A successful control response will
+        need to address the process for removing authorization if signatures
+        are not obtained in a timely manner.
+        */'
+
+- control_key: PL-4 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for incorporating explicit
+        restrictions on the use of social media/networking sites and posting
+        organizational information on public websites into the rules of
+        behavior. A successful control response will need to outline the
+        relevant portions of the rules of behavior.
+        */'
+
+- control_key: PL-8
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing their information
+        security architecture. A successful contrl response will need to
+        discuss the guiding principles used to protect confidentiality,
+        integrity, and availability of system information and the dependencies
+        on external services (such as Microsoft Azure). Additionally, a
+        description of the information security architecture should be included
+        in the introductory sections of this system security plan.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for reviewing and updating the
+        security architecture at a required frequency. A succesful control
+        response will need to address the process for initiating review, as well
+        as the individuals or roles responsible for carrying out the review,
+        managing updates, and approving the final version.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for incorporating changes to the
+        security architecture into this system security plan as well as
+        related materials. A successful control response will need to address
+        the process for aligning the contents of the system security plan
+        with the information security architecture, including the
+        individuals or roles responsible for that alignment.
+        */'
+- control_key: PS-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for assigning risk designations to
+        all positions of cusomer personnel using IaaS that are consistent
+        with the customers internal policies and procedures. A successful
+        control response will need to address the criteria used in risk
+        designation assignments (for example, specific responsibilities, access
+        to certain types of data, etc.).
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for establishing screening criteria
+        for individuals filling positions with access to the information
+        system. A successful control response will need to address the rationale
+        for each level of screening based on the responsibilities or access
+        associated with each risk designation.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for reviewing and revising risk
+        designations at the required frequency. A successful control response
+        will need to address the review process, including the role(s)
+        responsible for initiating the review process, revising risk
+        designations, and providing approval of any changes.
+        */'
+
+- control_key: PS-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for screening individuals prior to
+        authorizing access. A successful control response will need to
+        demonstrate alignment of the screening as performed to the screening
+        requirements established in PS-2.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for rescreening individuals at the
+        required frequency. A successful control response will need to discuss
+        the process for iniating rescreening, as well as for disabling or
+        removing access if rescreening is not completed in a timely manner.
+        */'
+
+- control_key: PS-3 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for ensuring that access to
+        information requiring special protection is contingent on additional
+        screening as required by the specific nature of that information. A
+        successful control response will need to address identifying such
+        information and enforcing the additional screening prior to
+        authorization of access
+        */'
+
+- control_key: PS-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: c
+      text: |
+        '//*
+        The customerw ill be responsible for conducting exit interviews. A
+        successful control response will need to address the topics discussed
+        during the interviews and the personnel responsible for conducting
+        the interviews.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for retrieving all security related,
+        information system related, organizational property from terminated
+        indviduals. A successful control response will need to address the
+        prcess and personnel responsible for ensuring that all such property
+        is retrieved.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for retaining access to information
+        and information systems formerly controlled by terminated individuals. A
+        successful control response will need to address how this retention
+        occures, personnel responsible for retention, and any minimum or
+        maximum retention periods.
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be responsible for notifying relevant personnel
+        within a defined time period after an individual is terminated. A
+        successful control response will need to define the time period and
+        personnel who should be notified, as well as discussing the process
+        by which notification happens.
+        */'
+
+- control_key: PS-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for reviewing access authorizations
+        for individuals when those individuals are reassigned or transferred. A
+        successful control response will need to address the intiation of this
+        review and individuals or roles responsible for perfoming and validating
+        the results of reviews.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for initiating reassignments or
+        transfers within a customer-defined time period after the formal
+        reaassignment or transfer. A successful control response will need to
+        address the specific ations taken, personnel responsible for those
+        actions, and timeframes for initiation of those actions.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for modifying access authorizations
+        based on the results of the review carried out in Part A. A successful
+        control response will need to address the process by which
+        authorizations are modified, personnel responsible for intiating the
+        change, and any technical means of enforcement of the change.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for notifying relevant personnel
+        within the required timeframe after a formal reassignment or transfer. A
+        successful control response will need to address the identification of
+        interested personnel or roles as well as the means by which notification
+        occurs.
+        */'
+
+- control_key: PS-6
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for developing agreements for access
+        to the system. A successful control response will need to outline the
+        contents of access agreements and the conditions under which they
+        are used.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for reviewing and updating access
+        agreements at the required frequency. A successful control response will
+        need to address the initiation of the review process, the personnel or
+        roles responsible for reviewing and updating the agreement, and the
+        process for approval of any changes.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for ensuring that individuals
+        review and sign access agreements prior to initial access and to
+        maintain access after updates. A successful control response will need
+        to address the process for withholding access until after the initial
+        signature is recieved, as well as for disabling or removing access if
+        the access agreement changes and an individual does not re-sign it in
+        a timely manner.
+        */'
+
+- control_key: PS-7
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing personnel security
+        requirements for third-party providers. A successful control response
+        will need to outline these requirements and address the process
+        for notifying third-party providers of the requirements.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for requiring third-party providers
+        to comply with the requirements established in PS-7(a). A successful
+        control response will need to address the process for obtaining
+        agreement to the requirements and enforcing the requirements.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for documenting personnel security
+        requirements for third-party providers. A successful control response
+        will need to discuss the process for creating documentation and sharing
+        it with the providers.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for including nofication of
+        terminations and transfers within the personnel security requirements. A
+        successful control response will need to discuss the specific
+        notification requirements, in particular the requirement for
+        notification within the same day.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for monitoring provider compliance
+        with personnel security requirements. A successful control response
+        will need to address personnel responsible for monitoring compliance,
+        mechanisms used for monitoring, and consequences of non-compliance.
+        */'
+- control_key: RA-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for categorizing the customer
+        system and information contained within it. A successful control
+        response will need to address the applicable Federal Laws, Executive
+        Orders, directives, policies, regulations, standards, and guidance, as
+        well as the key stakeholders involved in the categorization decision.
+
+        Resources related to information categorization include FIPS 199,
+        Standards for Security Categorization of Federal Information and
+        Information Systems, and NIST SP 800-61, Rev. 1, Guide for Mapping
+        Types of Information and Inforation Systems to Security Categories.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for documenting the security
+        categorization. A successful response will need to address supporting
+        rationale, including types of information considered, risk impact
+        analysis, and input from stakeholders and organizational officials.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for presneting the security
+        categorization decision to the Authorizing Official or a
+        designated representative for review and approval.
+        */'
+
+- control_key: RA-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for conducting a risk assessment,
+        including a review of controls inherited from infrastruture providers,
+        and for those which the customer is responsible. A successful control
+        response will need to address the assessment methodology and calculation
+        of the likelihood and magnitude of harm that could result from
+        unauthorized access, use, disclosure, disruption, or modification of
+        IaaS layers, the customer application, and the information processed,
+        stored, and transmitted by those systems.
+
+        NIST SP 80-30 Rev. 1, Guide for Conducting Risk Assessments, and NIST
+        SP 800-53A Rev. 4, Assessing Security and Privacy Controls in Federal
+        Information Systems and Organizations: Building Effective Assessment
+        Plans both provide guidance that may be used by the customer in
+        developing the risk assessment methodology and performing the risk
+        assessment.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for documenting the results of the
+        risk assessment in a Security Assessment Report. A successful control
+        response will need to address specific requirements for the report
+        (e.g., it should include controls that are considered "other than
+        satisfied," potential weaknesses in control sthat meet minimum
+        requirements, recommended remediation steps, and risks associated with
+        the system). The customer may with to employ a 3PAO to assist with
+        the initial risk assessment (see CA-2).
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for reviewing risk assessment results
+        at the required frequency. A successful control response will need to
+        address the personnel or roles responsible for reviewing results, as
+        well as any actions taken in response to risk assessment results.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for disseminating risk assessment
+        results to customer-defined stakeholders and organizational officials. A
+        successful control response will need to outline the stakeholders
+        involved and the means of distribution of results.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for updating the risk assessment
+        at the required frequency of when a significant change occurs. (Note
+        that "significant change" is defined in NIST 800-37 Rev 1, Appendix F).
+        A successful control respinse will need to discuss examples of
+        significant changes that might occur within the customer application,
+        as well as the specific actions that will be taken when the risk
+        assessment is updated (such as updating system security plans and
+        other documentation).
+        */'
+
+- control_key: RA-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for scanning for vulnerabilities
+        in customer applications and databases. Additionally, IaaS customers
+        using an operating system image will be responsible for scanning
+        for vulnerabilities in the operating system. A successful control
+        response will need to address the tools used to perform scans as well
+        as the additional FedRAMP requirement for independant assessors to
+        scan the system on an annual basis.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for ensuring that vulnerability
+        scanning tools use standards for enumerating components, flaws, and
+        improper configurations; formatting checklists and test procedures;
+        and measuring vulnerability impact. A successful control response will
+        need to address how each vulnerability scanning tool in use meets these
+        requirements (for example, by using Common Vulnerabilities and
+        Exposures (CVE) values).
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for analyzing scan reports and
+        assessment results for actionable data. A successful control response
+        will need to address the roles or personnel responsible for the
+        analysis, as well as criteria used in performing the analysis.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for sharing vulnerability scan
+        results and security assessment reports with customer-defined
+        stakeholders. A successful control response will need to address the
+        stakeholders involved and the types of information shared with
+        each stakeholder.
+        */'
+
+- control_key: RA-5 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for scanning customer applications
+        and customer-deployed operating system images using compliant
+        vulnerability scanning tools. A successful control response will need
+        to address the specific tools used and the process required to
+        update the list of information system vulnerabilities to be scanned
+        for each.
+        */'
+
+- control_key: RA-5 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for updating the list of
+        vulnerabilities scanner prior to each scan. A successful control
+        response will need to address the roles or personnel responsible for
+        ensuring that this requirement is met, as well as the process for
+        initiating a new scan if the required update does not occur.
+        */'
+
+- control_key: RA-5 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for ensuring that vulnerability
+        scanning tools and procedures demonstrate the breadth and depth of
+        coverage. A successful control response will need to address the
+        specific tools in use and discuss the reason each tool is felt to
+        provide sufficient breadth and depth of coverage.
+        */'
+
+- control_key: RA-5 (5)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for ensuring that scans of the
+        customer environment include privileged access authorizations. A
+        successful control response will need to address how privileged
+        access authorizations are configured, as well as how successful
+        authorization is validated during the analysis of scan results.
+        */'
+
+- control_key: RA-5 (6)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for using automated mechanisms to
+        analyze vulnerability scan results over time to determine trends. A
+        successful control response will need to discuss the mechanisms in use
+        and the metrics employed in scan result analysis.
+        */'
+
+- control_key: RA-5 (8)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for reviewing historic audit logs to
+        determine if a vulnerability identified in the information system
+        has been previously exploited. A successful control response will need
+        to address the criteria used in analysis of audit logs to correlate log
+        data with vulnerability scan results.
+        */'
+
+- control_key: SA-2
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for determining information security
+        requirements during mission/business process planning. A successful
+        control response will indicate how information security has been
+        integrated into mission/business planning.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for determining, documenting, and
+        allocating the resources required to protect the information system
+        as part of capital planning and investment control processes. A
+        successful control response will indicate how information security
+        has been incorporated into financial planning processes.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for establishing a discrete line
+        item for information security in organizational programming and
+        budgeting documentation. A successful control response will indicate
+        how information security is a stand-alone practice within the
+        organization.
+        */'
+
+- control_key: SA-3
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for managing the information system
+        using a Secure Development Lifecycle that incorporates information
+        security considerations. A successful control response will indicate
+        how information security requirements are part of project management
+        plans.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for defining and documenting
+        information security roles and responsibilities throughout the
+        system development lifecycle. A successful control response will
+        indicate how information security roles are kept current during all
+        stages of the information systems lifecycle.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for identifying individuals
+        that have information security roles and responsibilities. A successful
+        control response will document these individuals, their
+        responsibilities, and how the organization keeps current this
+        information.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for integrating the organizational
+        information security risk management process into system lifecycle. A
+        successful control response indicates how the organization follows the
+        NIST Risk Management Framework, or an agency-specific derivative.
+        */'
+
+- control_key: SA-4
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for including security functional
+        requirements in acquisition contracts. A successful control response
+        will need to address consideration of applicable federal laws,
+        Executive Orders, directives, policies, regulations, standards,
+        guidelines, and organizational mission/business needs in the creation
+        of the contracts.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for including security strength
+        requirements in acquisition contracts. A successful control response
+        will need to address consideration of applicable federal laws,
+        Executive Orders, directives, policies, regulations, standards,
+        guidelines, and organizational mission/business needs in the creation
+        of the contracts.
+        */'
+    - key: c
+      text: |
+        '//*
+        The customer will be responsible for including security assurance
+        requirements in acquisition contracts. A successful control response
+        will need to address consideration of applicable federal laws,
+        Executive Orders, directives, policies, regulations, standards,
+        guidelines, and organizational mission/business needs in the creation
+        of the contracts.
+        */'
+    - key: d
+      text: |
+        '//*
+        The customer will be responsible for including security-related
+        documentation requirements in acquistion contracts. A successful control
+        response will need to address consideration of applicable laws,
+        Executive Orders, directives, policies, regulations, standards,
+        guidelines, and organizational mission/business needs in the creation
+        of the contracts.
+        */'
+    - key: e
+      text: |
+        '//*
+        The customer will be responsible for including requirements for
+        protecting security-related documentation in acqusition contracts. A
+        successful control response will need to address consideration of
+        applicable laws, Executive Orders, directives, policies, regulations,
+        standards, guidelines, and organizational mission/business needs in the
+        creation of the contracts.
+        */'
+    - key: f
+      text: |
+        '//*
+        The customer will be responsible for including a description of the
+        information system development environment and in which the system
+        is intended to operate in acquisition contracts. A successful control
+        response will need to address consideration of applicable federal laws,
+        Executive Orders, directives, policies, regulations, standards,
+        guidelines, and organizational mission/business needs in the creation
+        of the contracts.
+        */'
+    - key: g
+      text: |
+        '//*
+        The customer will be responsible for including acceptance criteria
+        in acquisition contracts. A successful control response will need to
+        address consideration of applicable federal laws, Executive Orders,
+        directives, policies, regulations, standards, guidelines, and
+        organizational mission/business needs in the creation of the
+        contracts.
+        */'
+
+- control_key: SA-4 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for requiring the developer of
+        the information system to provide a description of the functional
+        properties of the security controls to be employed. A successful
+        control response will address how this requirement is built into
+        procurement language.
+        */'
+
+- control_key: SA-4 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for requiring the developer of the
+        information system to provide design and implementation information
+        for the security controls to be employed that includes security-relevant
+        external interfaces and high-level design. This information must be
+        at a level of detail sufficient for secure deployment. A successful
+        control response will indicate address how this requirement is built
+        into procurement language.
+        */'
+
+- control_key: SA-4 (8)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for requiring the developer of
+        customer-controlled software and operating systems to produce a plan
+        for continuous monitoring of security control effectiveness. A
+        successful control response will discuss the level of detail required
+        by the customer as part of these continuous monitoring activities.
+        */'
+
+- control_key: SA-4 (9)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for requiring the developer of
+        customer-controlled software and operating systems to identify required
+        ports, protocols, services and functions early in the development
+        process. A successful control response will address the process by
+        which this requirement is enforced.
+        */'
+
+- control_key: SA-4 (10)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer is responsible for employing only information
+        technology products on the FIPS 201-approved products list for
+        Personal Identity Vertification (PIV) capability implemented within
+        organizational information systems. A successful control response will
+        indicate that all system components have been selected from this list,
+        and if not, document waivers with appropriate organizational authorities
+        signature.
+        */'
+
+- control_key: SA-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        Customers are responsible for obtaining administrator documentation
+        for customer-controlled software and operating systems. A successful
+        control response will address the specific content requirements
+        outlined in the control
+        */'
+    - key: b
+      text: |
+        '//*
+        Customers are responsible for obtaining user documentation for
+        customer-controlled software and operating systems. A successful control
+        response will address the specific content requirements outlined in
+        the control.
+        */'
+    - key: c
+      text: |
+        '//*
+        Customers are responsible for documenting attempts to obtain
+        administrator and user documentation for customer-controlled software
+        and operating systems if that documentation is not available. A
+        successful control response will discuss the process by which attempts
+        to obtain documentation are made as well as any additional actions
+        taken.
+        */'
+    - key: d
+      text: |
+        '//*
+        Customers are responsible for protecting administrator and user
+        documentation for customer-controlled software and operating systems.
+        A successful control response will discuss how the safeguards are used
+        in accordance with the organizations risk management strategy.
+        */'
+    - key: e
+      text: |
+        '//*
+        Customers are responsible for distributing documentation for
+        customer-controlled software and operating systems to appropriate
+        personnel. A successful control response will discuss the means
+        of distribution and the process for designating appropraite personnel
+        or roles.
+        */'
+
+- control_key: SA-8
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for embedding secure system development
+        lifecycle principles in the specification, design, development,
+        implementation, and modification of the system. A successful control
+        response will discuss the processes followed.
+        */'
+
+- control_key: SA-9
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        Customers are responsible to require that external information systems
+        comply with organiziational security requirements and FedRAMP
+        Security Controls Baseline(s) if Federal information is processed or
+        stored within the external system. A successful control response will
+        indicate how this is enforced, procedurally and technically, for
+        external information systems.
+        */'
+    - key: b
+      text: |
+        '//*
+        Customers are responsible for defining and documenting government
+        oversight and user roles and responsibilities regarding external
+        information system services. A successful contro response will address
+        the procedures for this oversight.
+        */'
+    - key: c
+      text: |
+        '//*
+        Customers are responsible for employing Federal/FedRAMP Continuous
+        Monitoring Requirements on external systems where Federal information
+        is processed or stored, and monitor security control compliance by
+        external serice providers on an ongoing basis. A successful control
+        response will address the procedural and technical processes used to
+        accomplish this.
+        */'
+
+- control_key: SA-9 (1)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        Customers are responsible for conducting organizational assessment
+        of risk prior to the acquisition or outsourcing of dedicated
+        information security services. A successful control response will
+        address the process of the risk assessment and analysis of findings.
+        */'
+    - key: b
+      text: |
+        '//*
+        Customers are responsible for ensuring that the aquisition or
+        outsourcing of dedicated information security services is approved
+        by organizational authorities. A successful control response will
+        address formal approval processes.
+        */'
+
+- control_key: SA-9 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for requiring providers of all external
+        information systems where Federal information is processed or stored
+        to identify the functions, ports, protocols, and other services
+        required for the use of such services. A successful control response
+        will indicate this requirement in contracting language.
+        */'
+
+- control_key: SA-9 (4)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for employing FedRAMP security requirements
+        to ensure the interests of all external systems where Federal
+        information is processed or stored is consistent with and reflect
+        organizational interests. A successful control response will discuss
+        how FedRAMP security requirements are enforced in external systems.
+        */'
+
+- control_key: SA-9 (5)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        Customers are responsible for restricting the location of information
+        processing, information data, and information services, to
+        continental United States datacenters based on business requirements.
+        */'
+
+- control_key: SC-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer is responsible for protecting against or limiting
+        the effects of attacks on bandwidth, attacks on transactional
+        capacity, attacks on storage capacity by employing geo-replication,
+        IP address blocking, network-based DDos protections. A successful
+        control response will discuss how the information system is protected
+        from these attacks.
+        */'
+
+- control_key: SC-12 (2)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for producing, controlling, and
+        distributing symmetric cryptographic keys (if any are used within
+        the customer application) using NIST FIPS-compliant key management
+        technology and proesses. A successful control response will need to
+        address the processes and tools used for key generation and discuss
+        the reasons they are considered compliant.
+        */'
+
+- control_key: SC-12 (3)
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - text: |
+        '//*
+        The customer will be responsible for producign, controlling, and
+        distributing asymetric cryptographic keys (if any are used within the
+        customer application) using one of the specified tools or processes. A
+        successful control response will need to address the process and tools
+        used for key generation and discuss the reasons they are considered
+        compliant.
+        */'
+
+- control_key: SC-15
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for prohibiting remote activation
+        of any collaborative computing devices within or controlled from
+        the customer application.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for providing an explicit indication
+        of use of any collaborative computing devices within or controlled
+        from the customer application. A successful control response will
+        need to address how this explicit indication is enabled, the form
+        it takes, and the means by which activation can be verified.
+        */'
+    - key: 'Req. 1'
+      text: |
+        '//*
+        The customer will be responsible for providing easy to use
+        functionality to disable any collaborative computing devices within
+        or controlled from the customer application.
+        */'
+
+- control_key: SC-18
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        Mobile code is code that is downloaded and executed by the client
+        machine, rather than on the remote host. The customer will be
+        responsible for defining mobile code technologies as acceptable or
+        unacceptable for use within the system.
+        */'
+    - key: b
+      text: |
+        '//*
+        The customer will be responsible for defining usage restrictions
+        and implementation guidance for acceptable mobile code and mobile
+        code technologies.
+        */'
+
+- control_key: SC-19
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The customer will be responsible for establishing usage restrictions
+        and implementation guidance for the use of VoIP technologies within
+        the customer application. A successful control response will need
+        to address whether and how VoIP technologies are used and outline
+        the conditions under which that usage is appropriate.
+        */'
+- control_key: SI-1
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: a
+      text: |
+        '//*
+        The organization will be responsible for developing, documenting, and
+        disseminating System and Information Integrity policy and procedures. A
+        successful control response will need to address the content of the
+        policy (which must include purpose, scope, roles, responsibilities,
+        management commitment, coordination, and compliance) and procedures
+        (which must facilitate the implementation of the policies and
+        associated controls).
+        */'
+    - key: b
+      text: |
+        '//*
+        The organization will be responsible for reviewing and updating the
+        System and Information Integrity policy every 3 years, and procedures
+        annually. A successful control response will need to address the
+        review and update process, including the role(s) responsible for
+        initiating the review process, updating the policy and procedures,
+        and providing approval of the updates.
+        */'
+
+- control_key: SI-5
+  standard_key: NIST-800-53
+  covered_by: []
+  implementation_status: none
+  narrative:
+    - key: b
+      text: |
+        '//*
+        The organization will be responsible for generatign internal security
+        alerts, advisories and directives. A successful control response will
+        need to address the criteria used to determine what alerts, advisories,
+        and directives are necessary, based on the specifics of the customer
+        mission, software, or service.
+        */'
+    - key: c
+      text: |
+        '//*
+        The organization will be responsible for disseminating security alerts,
+        advisories and directives within the customer organization and to
+        external organizations as necessary. A successful control response will
+        need to address the personnel or roles within the organization who
+        require notificiation.
+        */'
